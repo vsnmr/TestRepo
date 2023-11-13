@@ -1,0 +1,50 @@
+create table tbl_EBillDetails
+(
+Id int primary key identity(1,1),
+customerName varchar(255),
+MobileNumber varchar(255),
+customerAddress varchar(255),
+totalAmount int 
+)
+create table tbl_BillItems
+(
+Id int primary key identity(1,1),
+productName varchar(255),
+price int,
+quantity int,
+billId int foreign key references tbl_EBillDetails(Id)
+)
+
+
+create procedure USP_SaveBillDetails
+
+@customerName varchar(255),
+@MobileNumber varchar(255),
+@customerAddress varchar(255),
+@totalAmount int,
+@id int output 
+as
+begin
+	insert into tbl_EBillDetails (customerName,MobileNumber,customerAddress,totalAmount)
+	values (@customerName,@MobileNumber,@customerAddress,@totalAmount)
+	select @id=SCOPE_IDENTITY()
+end
+
+
+create procedure USP_GetAllEBillDetails
+as begin
+select * from tbl_EBillDetails
+end
+
+
+create procedure USP_GetBillDetailsByID
+@id int
+as 
+begin
+select d.Id as 'BillId' ,customerName,MobileNumber,customerAddress,totalAmount,
+i.Id as 'ItemId',productName,price,quantity
+from tbl_EBillDetails d
+inner join tbl_BillItems i
+on d.id=i.billId
+where d.Id=@id
+end

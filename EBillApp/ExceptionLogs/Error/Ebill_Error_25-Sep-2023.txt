@@ -1,0 +1,6 @@
+2023-09-25 18:48:11.9344 Error System.DivideByZeroException: Attempted to divide by zero. ActionMethodDispatcher.Execute => <no type>.lambda_method => EBillController.Create source:EBillApp.Controllers.EBillController.Create(E:\Tech_ART\NEW_Technologies\DotNetProject\EBillApp\EBillApp\Controllers\EBillController.cs:75) 
+
+
+2023-09-25 18:50:58.4192 Error System.DivideByZeroException: Attempted to divide by zero. ActionMethodDispatcher.Execute => <no type>.lambda_method => EBillController.Create source:EBillApp.Controllers.EBillController.Create(E:\Tech_ART\NEW_Technologies\DotNetProject\EBillApp\EBillApp\Controllers\EBillController.cs:75) 
+
+

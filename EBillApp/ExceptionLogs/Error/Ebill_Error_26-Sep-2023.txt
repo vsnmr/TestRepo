@@ -1,0 +1,3 @@
+2023-09-26 09:52:47.0595 Error Attempted to divide by zero. ActionMethodDispatcher.Execute => <no type>.lambda_method => EBillController.Create source:EBillApp.Controllers.EBillController.Create(E:\Tech_ART\NEW_Technologies\DotNetProject\EBillApp\EBillApp\Controllers\EBillController.cs:75) 
+
+

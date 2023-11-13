@@ -1,0 +1,98 @@
+﻿@model EBillApp.Models.BillDetail
+@{
+    ViewBag.Title = "ViewBill";
+}
+
+<div class="container shadow rounded mt-4">
+    <div class="row">
+        <div class="col-6">
+            <h3>Mallesh Programing </h3>
+            <pre>
+Hyderabad,Telangana,India 50045,
+phone:8897960561,
+website:
+
+
+</pre>
+        </div>
+        <div class="offset-3 col-3">
+            <h3 class="text-primary">E-Bill</h3>
+            <pre>
+Number:@Model.Id
+</pre>
+
+        </div>
+        <div class="mt-3">
+            <div class="col-3">
+                <h4 class="bg-primary text-white">
+                    Bill
+
+                </h4>
+                <pre>
+@Model.CustomerName
+@Model.MobileNumber
+@Model.CustomerAddress
+</pre>
+
+            </div>
+
+        </div>
+        <div class="row mt-3">
+            <div class="col-12">
+                <table class="table table-bordered table-striped table-responsive">
+                    <thead>
+                        <tr>
+                            <th>
+                                Id
+                            </th>
+                            <th>
+                                Product Name
+                            </th>
+                            <th>
+                                Price
+                            </th>
+                            <th>
+                                Quantity
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var items in Model.Items)
+                        {
+                            <tr>
+                                <td>
+                                    @items.Id
+                                </td>
+                                <td>
+                                    @items.ProductName
+                                </td>
+                                <td>
+                                    @items.Price
+                                </td>
+                                <td>
+                                    @items.Quantity
+                                </td>
+                       
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+        <div class="row mt-2">
+            <div class="col-12">
+                <h4 class="float-end">Total Amount: @Model.TotalAmount</h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+

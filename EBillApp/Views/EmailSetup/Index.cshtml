@@ -1,0 +1,44 @@
+﻿@model EBillApp.Models.MvcGmail
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EmailSend</title>
+</head>
+<body>
+    <div>
+        @using (Html.BeginForm("Index", "EmailSetup", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <table>
+                <tr>
+                    <td>To:</td>
+                    <td>@Html.TextBoxFor(model => model.To)</td>
+                </tr>
+                <tr>
+                    <td>Subject:</td>
+                    <td>
+                    <td>@Html.TextBoxFor(model => model.Subject)</td></td>
+                </tr>
+                <tr>
+                    <td>Body:</td>
+                    <td>
+                    <td>@Html.TextBoxFor(model => model.Body)</td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Send" />
+                    </td>
+
+                </tr>
+
+            </table>
+        }
+    </div>
+</body>
+</html>
