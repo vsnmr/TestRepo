@@ -72,3 +72,6 @@ E:\Tech_ART\NEW_Technologies\DotNetProject\EBillApp\EBillApp\obj\Debug\EBillApp.
 E:\Tech_ART\NEW_Technologies\DotNetProject\EBillApp\EBillApp\obj\Debug\EBillApp.pdb
 E:\Tech_ART\NEW_Technologies\DotNetProject\EBillApp\EBillApp\bin\NLog.dll
 E:\Tech_ART\NEW_Technologies\DotNetProject\EBillApp\EBillApp\bin\NLog.xml
+E:\Tech_ART\NEW_Technologies\DotNetProject\EBillApp\EBillApp\bin\Google.Authenticator.dll
+E:\Tech_ART\NEW_Technologies\DotNetProject\EBillApp\EBillApp\bin\QRCoder.dll
+E:\Tech_ART\NEW_Technologies\DotNetProject\EBillApp\EBillApp\bin\Google.Authenticator.pdb
